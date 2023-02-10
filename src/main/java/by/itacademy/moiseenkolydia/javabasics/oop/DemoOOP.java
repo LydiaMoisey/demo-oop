@@ -21,6 +21,20 @@ public class DemoOOP {
                 firstCustomer.getAddress() + ", " +
                 firstCustomer.getCardNumber() + ", " + firstCustomer.getAccountNumber());
 
+        Customer secondCustomer = new Customer();
+        secondCustomer.setId(0);
+        secondCustomer.setFirstName("");
+        secondCustomer.setLastName(faker.name().lastName());
+        secondCustomer.setMiddleName(faker.name().firstName());
+        secondCustomer.setAddress(faker.address().fullAddress());
+        secondCustomer.setCardNumber(faker.business().creditCardNumber());
+        secondCustomer.setAccountNumber(faker.finance().iban());
+        System.out.println(secondCustomer.getId() + ", " +
+                secondCustomer.getFirstName() + " " + secondCustomer.getLastName() + " " +
+                secondCustomer.getMiddleName() + ", " +
+                secondCustomer.getAddress() + ", " +
+                secondCustomer.getCardNumber() + ", " + secondCustomer.getAccountNumber());
+
         Book firstBook = new Book();
         firstBook.setId(faker.number().numberBetween(1, Integer.MAX_VALUE));
         firstBook.setTitle("The Picture of Dorian Gray");
