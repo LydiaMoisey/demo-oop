@@ -2,6 +2,8 @@ package by.itacademy.moiseenkolydia.javabasics.oop;
 
 import com.github.javafaker.Faker;
 
+import java.util.Scanner;
+
 public class DemoOOP {
     public static void main(String[] args) {
         Faker faker = new Faker();
@@ -63,5 +65,24 @@ public class DemoOOP {
                 firstCar.getProductionYear() + "г., " +
                 firstCar.getColor() + ", " +
                 firstCar.getLicensePlate() + ", " + firstCar.getPrice() + "руб.");
+
+        Student firstStudent = new Student();
+        firstStudent.setGrant(500);
+        System.out.println(firstStudent.getGrant() + " руб.");
+        Person firstPerson = new Person();
+        firstPerson.setName("Алекс");
+        firstPerson.setSalary(200);
+        System.out.println(firstPerson.getName() + ", доход - " +  firstPerson.getIncome() + " руб.");
+
+        Person secondPerson = new Person();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите имя");
+        secondPerson.setName(scan.nextLine());
+        System.out.println("Стипендия");
+        secondPerson.setGrant(scan.nextInt());
+        System.out.println("Зарплата");
+        secondPerson.setSalary(scan.nextInt());
+        System.out.println(secondPerson.getName() + ", доход - " +  secondPerson.getIncome() + " руб.");
+
     }
 }
